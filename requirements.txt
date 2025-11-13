@@ -1,0 +1,13 @@
+bertopic
+matplotlib
+nltk
+numpy
+pandas
+regex
+scikit-learn
+sentence-transformers
+spacy
+torch
+tqdm
+transformers
+hf_xet

@@ -34,11 +34,11 @@ event_df = df[df["event"] == selected_event].copy()
 event_df["date"] = event_df["timestamp"].dt.date
 agg = event_df.groupby("date")[["vader_score","empathy_score"] + emotion_cols].mean().reset_index()
 
-st.title(f"Emotion and Empathy Timeline: {selected_event}")
+st.title(f"Emotion and empathy timeline: {selected_event}")
 
 fig_sent = px.line(
     agg, x="date", y=["vader_score","empathy_score"],
-    title="Sentiment vs Empathy over Time",
+    title="Sentiment vs empathy over time",
     markers=True
 )
 fig_sent.update_layout(yaxis_title="Average score", legend_title="Metric")
